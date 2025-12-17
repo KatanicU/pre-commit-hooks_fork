@@ -213,6 +213,6 @@
 -   id: forbid-words-in-filenames
     name: Check for forbidden words in filenames
     description: Prevents committing files with certain forbidden words in their filenames.
-    entry: python3 pre_commit_hooks/forbid_words_in_filenames.py
-    language: system
+    entry: forbid-words-in-filenames
+    language: python
     types: [file]
