@@ -216,3 +216,4 @@
     entry: forbid-words-in-filenames
     language: python
     types: [file]
+    pass_filenames: false
