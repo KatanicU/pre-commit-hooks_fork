@@ -43,8 +43,4 @@ repos:
 - repo: https://github.com/KatanicU/pre-commit-hooks_fork
   rev: v2.3.10
   hooks:
-      - id: check-yaml
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: name-tests-test
       - id: forbid-words-in-filenames
