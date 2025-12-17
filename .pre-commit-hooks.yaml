@@ -210,3 +210,11 @@
     types: [text]
     stages: [pre-commit, pre-push, manual]
     minimum_pre_commit_version: 3.2.0
+-   id: forbid-articles
+    name: forbid articles
+    description: forbid articles (a,an,the).
+    entry: forbid-articles
+    language: python
+    types: [text]
+    stages: [pre-commit, pre-push, manual]
+    minimum_pre_commit_version: 3.2.0
