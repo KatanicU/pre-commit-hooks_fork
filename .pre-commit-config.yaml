@@ -39,3 +39,11 @@ repos:
     rev: v1.11.2
     hooks:
     -   id: mypy
+
+-   repo: local
+    hooks:
+    -   id: forbid-words-in-filenames
+        name: Check for forbidden words in filenames
+        entry: python3 pre_commit_hooks/forbid_words_in_filenames.py
+        language: system
+        types: [file]
