@@ -33,18 +33,18 @@ def has_forbidden_article(path: Path) -> bool:
 
 
 def main() -> int:
+    bad = []
     for path in git_ls_python_files():
-        if not is_test_file(path):
-            continue
+        if is_test_file(path) and has_forbidden_article(path):
+            bad.append(path)
 
-        if has_forbidden_article(path):
-            print("ERROR: Forbidden article in test filename:")
-            print(path)
-            return 1
+    if bad:
+        print("ERROR: Forbidden article in test filename(s):")
+        for p in bad:
+            print(p)
+        return 1
 
     return 0
-
-# check test name
 
 if __name__ == "__main__":
     sys.exit(main())
